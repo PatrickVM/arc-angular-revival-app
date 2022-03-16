@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { RevivalDetailComponent } from './revival-detail/revival-detail.component';
+import { RevivalsComponent } from './revivals/revivals.component';
+
+const routes: Routes = [
+  { path: 'detail/:id', component: RevivalDetailComponent },
+  { path: 'revivals', component: RevivalsComponent },
+  { path: '', redirectTo: '/revivals', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

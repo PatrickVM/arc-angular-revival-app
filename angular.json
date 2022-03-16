@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "first-concept:build:production",
+            "firebaseProject": "revival-history",
+            "firebaseHostingSite": "revival-history"
+          }
         }
       }
     }

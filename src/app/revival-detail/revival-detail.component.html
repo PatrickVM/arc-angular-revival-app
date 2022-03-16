@@ -1,0 +1,28 @@
+<div class="main-container" *ngIf="revival">
+
+    <h2  contenteditable="true">{{revival.name | uppercase}} Details</h2>
+    <h3>ID: {{revival.id}}</h3>
+    <div>DATE: {{revival.date}}</div>
+     
+    <h5>{{revival.comments}}</h5>
+    
+
+    
+    <div >
+        <!-- <label for="revival-name">Name: </label> -->
+        <input id="revival-name" [(ngModel)]="revival.name" placeholder="Name"><br>
+        <!-- <label for="revival-date">Date: </label> -->
+        <input id="revival-date" [(ngModel)]="revival.date" placeholder="Date"><br>
+        <!-- <label for="revival-comment">Comment: </label> -->
+        <input id="revival-comment" [(ngModel)]="revival.comments" placeholder="Your Experience?">
+        <br>
+        <button class="back-button" type="button" (click)="save()">save</button>
+        <button class="back-button" type="button" (click)="goBack()">go back</button>
+
+    </div>
+    
+
+</div>
+
+<!-- <button class="back-button" type="button" (click)="goBack()">go back</button> -->
+<!-- <button class="back-button" type="button" (click)="save()">save</button> -->

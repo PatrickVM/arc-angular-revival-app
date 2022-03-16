@@ -1,0 +1,51 @@
+<!-- <div>
+    <label for="revival-name">Revival Name: </label>
+    <input id="revival-name" [(ngModel)]="revival.date" placeholder="Revival Name">
+</div> -->
+
+<!-- {{revival.name}}
+{{revival.date}}
+{{revival.comments}} -->
+
+<!-- <h2>Revivals</h2> -->
+
+<div class="input-revival">
+    <label hidden="true" for="new-revival">Revival Name: </label>
+    <input id="new-revival" #revivalName placeholder="Revival Name"/>
+    <input #revivalDate placeholder="Date of Revival"/>
+    
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(revivalName.value, revivalDate.value); revivalName.value=''">
+        Add
+      </button>
+</div>
+ 
+
+<div class="main-container">
+    <ul>
+        <li *ngFor="let revival of revivals">
+            <a routerLink="/detail/{{revival.id}}">
+                <span>{{revival.name}}</span>
+                - {{revival.date}}
+            <!-- <button type="button" (click)="onSelect(revival)"></button> -->
+            </a>
+            <button class="button" type="button" (click)="delete(revival)">X</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Revival Details -->
+<!-- <app-revival-detail [revival]="selectedRevival"></app-revival-detail> -->
+<!-- <div *ngIf="selectedRevival">
+
+    <h2>{{selectedRevival.name | uppercase}} Details</h2>
+    <div>ID: {{selectedRevival.id}}</div>
+    <div>
+        <label for="revival-name">Revival Name: </label>
+        <input id="revival-name" [(ngModel)]="selectedRevival.name" placeholder="name">
+    </div>
+    <div>DATE: {{selectedRevival.date}}</div>
+    <h3>{{selectedRevival.comments}}</h3>
+    
+
+</div> -->
